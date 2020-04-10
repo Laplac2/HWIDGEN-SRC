@@ -1450,7 +1450,7 @@ SetFormat Integer, D
 buildlabex2 := ubr
 buildlabex2 = %buildlabex2%
 FileInstall, PID8.vbs, %A_Temp%\PID8.vbs, 1
-RunWait, %system32%\cmd.exe /c (cscript.exe /nologo %A_Temp%\PID8.vbs)>>%A_Temp%\kms.log, , Hide
+RunWait, %ComSpec% /c ""cscript.exe" "/nologo" "%A_Temp%\PID8.VBS" >> %A_Temp%\kms.log", , Hide
 fileread, syskey, %A_Temp%\kms.log
 Loop, Parse, syskey, `n, `n`r
 {

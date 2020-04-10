@@ -11,6 +11,8 @@ Basically:
 
 The activation process will only be performed once per each single machine, Windows 10 then gets activated/converted from a MSDN license (in case it was detected e.g. in case a product key was found - Retail/embedded BIOS) to a Digital License in order to activate the OS. 
 
+The program works via slshim and Windows 10 own GatherOsState.exe (which you can extract from the ISO). The activation keys are used from the products.ini, these keys are generic ones and a legal to post/share – in other words these are the keys you can temporarily use during setup (usually). If you format your PC you need to re-run HWIDGEN, a in-place upgrade survives the activation. 
+
 
 ## Files
 * `GATHEROSSTATE.EXE`: Taken from the official MS ISO.
@@ -25,7 +27,7 @@ The activation process will only be performed once per each single machine, Wind
 
 ## Is the tool "hwidgen" a legal activation method?
 
-It's a **gray-zone**. The tool itself is against Microsoft Windows 10 ToS, however the used methods are controversial and theoretically legal because they are not hacking, manipulating any official Windows files or altering official servers.
+It's a **gray-zone**. The tool itself is _against Microsoft Windows 10 ToS_, however the used methods are controversial and theoretically legal because they are not hacking, manipulating any official Windows files or altering official servers.
 
 
 ### Anti-Virus Scanner
@@ -35,6 +37,25 @@ HWIDGEN is often (not by all) anti-virus scanner(s) detected as malware. This is
 Most (if not all) AV products/scanner-websites (e.g. VirusTotal) detecting "illegal" activation methods as malware. This is normal and you can simply exclude the utility within your AV scanner. 
 
 To verify if the tool you downloaded is the original one, make sure you checked the checksums provided in the official forums/mirror threads.
+
+
+## Why slshim is required?
+slshim was created by it’s author as a replacement of MS software protection platform which allows to use Windows without too much problems, but with changed Product Policy using altered registry entries. Gatherosstate uses the slc.dll library to determine the current activation status and licensing channel from the Windows product policy.
+
+Basically slshim is an emulation of slc.dll that is read by gatherosstate, we can change what it will return to it. Slshim passes a few changed policies, and gatherosstate thinks that Windows was activated because of it. That’s it, gatherosstate creates GenuineTicket without any further verification.
+
+
+## Why 1803 gatherosstate.exe?
+Gatherosstate in 1803/1903 (April Update) contains information about every single Windows Edition (SKU) that exists and due to this, it is able to create ticket on any edition. Older versions also work, but it can only create tickets on some specific editions.
+
+So, overall the activation isn’t illegal it basically abuses an activation weakness (which is opened since several years in Windows) because Microsoft still allows you to ‘get Windows for free’. Changing the HWID does the rest in order to fool or bypass the integrated activation mechanism.
+
+The program has two modes, one is an automatic mode which activates all MS Windows versions and the other method is the manual method which can be used in order to activate problematically SKU’s like S/N versions.
+
+The program takes some time, so be patient. Another thing I can suggest is that you run it from a C:\ drive directly with administrative privileges (and use a folder/path without spaces). Once the tool is running it creates some kind of debug log near the executable.
+
+## Why we can still activate Windows using GenuineTicket?
+Windows 10 internally uses the same activation system for legitimate Retail and OEM activations so users do not need to enter their key when reinstalling system. Systems activated using these keys are first activated using key, then HWID license is created.
 
 
 ## Supported Windows systems

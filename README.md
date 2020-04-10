@@ -2,25 +2,26 @@
 
 This project provides the source code of the popular HWIDGEN Windows activation "tool" which basically is only an AutoHotKey script compiled into an .exe binary. 
 
+ s1ave77 [left MDL on his own terms](https://forums.mydigitallife.net/threads/kms38.80015/#post-1538193), he takes a break.
 
 ## Discussion
 A public discussion around the source code can be found [here](https://old.reddit.com/r/Piracy/comments/d654al/contribution_hwidgen_source_code/). 
 
-The official developer provides support for his tool at [Nsane forums](https://www.nsaneforums.com/topic/312871-windows-10-digital-license-hwid-generation-without-kms-or-predecessor-installupgrade) (hidden) and [AiOwares forums](https://www.aiowares.com/showthread.php?tid=246) (read-only). 
+The official developer provides support for his tool at [Nsane forums](https://www.nsaneforums.com/topic/312871-windows-10-digital-license-hwid-generation-without-kms-or-predecessor-installupgrade) (hidden/removed) and [AiOwares forums](https://www.aiowares.com/showthread.php?tid=246) (read-only/hidden) or via Discord. 
 
 A public hwidgen mirror to the latest version can be found over [here](https://old.reddit.com/r/sjain_guides/comments/9qyuij/hwidkms38genmk6_download_and_usage_guide/), an unofficial support thread is avbl. over [here](https://www.reddit.com/r/Piracy/comments/d654al/contribution_hwidgen_source_code). 
 
 
 ## Contributing
-* Please don't abuse GitHub's issue ticket system for any basic questions, otherwise I'm going to close it! For common questions check Reddit, Nsane or AiOwares forums.
-* Constructive feedback is (_of course_) always welcome.
+* Please don't abuse GitHub's issue ticket system for any basic questions, otherwise I'm going to close it! For common questions check Reddit, Nsane, AiOwares or Discord.
+* Constructive, non "low-effort" feedback is (_of course_) always welcome.
 
 
 ## Credits
 * The main credit goes to the original author Mspaintmsi and Anonymous, for HWID and KMS38.
 * HWIDGEN GUI itself came from slave (a.k.a. s1ave77). 
 * All contributors for this project which helped to reveal the source code or to provide some useful background information, pull requests. 
-* The people (including me) which originally worked on the first 'KMS solution'. KMS Pico was not the original project, but got very popular because it got published on a bigger russian website.
+* The people (_including me_) which originally worked on the first 'KMS solution'. KMS Pico was **not the original project**, but got very popular because it got published on a bigger russian website.
 * Avxgov which contributed (a lot) to the original HWIDGEN project.
 * The community around hwidgen, which helped a lot to improve it (bug reports, feedback - you name it!).
 * TheMCHK for his [reddit post](https://www.reddit.com/r/Piracy/comments/d654al/contribution_hwidgen_source_code).
@@ -41,7 +42,9 @@ The HWIDGEN-SRC project only provides the information and the files to show how 
 
 
 ## Dependencies
+
 HWIDGEN requires several dependencies to run:
+
 * Windows 10
 * gatherosstate (_can be extracted from the Windows 10 Image_)
 * slc
@@ -58,7 +61,10 @@ HWIDGEN requires several dependencies to run:
 
 **Notice:** - The strange part is that slave releases his source for his other ~~tools~~ scripts on [GitLab](https://gitlab.com/s1ave77). - 
 
-There are multiple reasons, the original author slave has another opinion on open sourcing programs than I have. He believes keeping the source closed will prevent people from stealing his work. Keep in mind that I do not stole his work here, I just provide the code because he refused it (many times) to open it and he got several times asked (e.g. on Reddit, Nsane,..), yet he (still) refuses to do that, so let's decompile it and show the world how his script works. 
+There are multiple reasons, the original author slave has another opinion on open sourcing programs than I have. He believes keeping the source closed will prevent people from stealing his work or that MS closes the hole. 
+
+Keep in mind that I do not stole his work here, I just provide the code because he refused it (many times) to open it and he got several times asked (e.g. on Reddit, Nsane,..), yet he (still) refuses to do that, so let's decompile it and show the world how his script works. 
+
 
 ### Personal comment
 I believe publishing the source code is overall a good thing for everyone because it levels the playing field. White hats, "cracker" or other people want to know about the current Windows activation holes and I don''t think that ["security through obscurity"](https://en.wikipedia.org/wiki/Security_through_obscurity) is the way to go. 
